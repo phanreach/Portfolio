@@ -1,32 +1,178 @@
+/* Global Styles */
+body {
+  background-color: black;
+  color: white;
+  padding-top: 60px;
+  font-family: Arial, sans-serif;
+}
 
-      body {
-        background-color: black;
-        color: white;
-        padding-top: 60px;
-        font-family: Arial;
-      }
-      .navbar-brand {
-        font-family: 'Arial Black', sans-serif;
-      }
-      .card {
-        background-color: #1c1c1a;
-        border: none;
-        color: white;
-      }
-      
-      a {
-        color: #ffc107;
-      }
-      a:hover {
-        color: white;
-      }
-      #skills .img-fluid {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      
-      #skills .img-fluid:hover {
-        transform: scale(1.1);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      }
-      
-     
+/* Navigation Styles */
+.navbar-brand {
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* Link Styles */
+a {
+  color: #ffc107;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/* Card Base Styles */
+.card {
+  background-color: #1a1a1a;
+  border: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section */
+#skills .img-fluid {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 90px;
+}
+
+#skills .img-fluid:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects Section */
+.project-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+.project-card img.img-fluid {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img.img-fluid {
+  transform: scale(1.02);
+}
+
+/* Text Styles */
+.lead {
+  color: #ffc107;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.text-warning {
+  color: #ffc107 !important;
+}
+
+/* Feature List Styles */
+.bg-light {
+  background-color: #2a2a2a !important;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.list-unstyled li {
+  padding: 0.5rem 0;
+}
+
+.bi-check2-circle {
+  color: #ffc107;
+}
+
+/* Button Styles */
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  transform: translateX(5px);
+}
+
+.btn-primary {
+  background-color: #0066cc;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0052a3;
+  transform: translateX(5px);
+}
+
+/* Technology Stack */
+.technology-stack {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.technology-stack img {
+  transition: transform 0.3s ease;
+  opacity: 0.9;
+}
+
+.technology-stack img:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 991.98px) {
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+  
+  .technology-stack {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffc107;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e0a800;
+}
