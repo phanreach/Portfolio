@@ -10,6 +10,21 @@ body {
 .navbar-brand {
   font-family: 'Arial Black', sans-serif;
 }
+.gradient-text {
+  background: linear-gradient(to right, #9C83FE, #FE8F50); /* Customize these colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-border{
+  font-size: 16px;
+  background: transparent;
+  color: white;
+  border-image: linear-gradient(to right, #9C83FE, #FE8F50);
+  border-image-slice: 1;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
 
 /* Link Styles */
 a {
@@ -84,11 +99,7 @@ a:hover {
   padding: 0.5rem 0;
 }
 
-/* .bi-check2-circle {
-  color: #ffc107;
-} */
 
-/* Button Styles */
 .btn-warning {
   background-color: #ffc107;
   border: none;
@@ -127,20 +138,9 @@ a:hover {
 
 .technology-stack img:hover {
   transform: translateY(-3px);
-  opacity: 1;
 }
 
-/* Animation Keyframes */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 /* Media Queries */
 @media (max-width: 991.98px) {
@@ -154,7 +154,6 @@ a:hover {
   
   .technology-stack {
     gap: 1rem;
-    flex-wrap: wrap;
     justify-content: center;
   }
 }
